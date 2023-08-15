@@ -27,4 +27,10 @@ describe('App Component', () => {
     expect(linkElement).toBeInTheDocument();
   });
 
+  test('renders App.js change info', () => {
+    render(<App />);
+    const appPrompt = screen.getByText(/src\/App.js/);
+    expect(appPrompt).toBeInTheDocument();
+  });
+
 });
